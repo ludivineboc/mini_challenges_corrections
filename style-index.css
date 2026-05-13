@@ -1,0 +1,114 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+}
+
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.gap-50 {
+    gap: 50px;
+}
+
+/* container dashboard */
+ul {
+    list-style: none;
+}
+
+/* cartes dashboard */
+li {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    transition: 0.35s ease;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    width: 30%;
+    padding: 50px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* hover card */
+li:hover {
+
+    transform: translateY(-10px) scale(1.03);
+
+    border-color: rgba(56, 189, 248, 0.4);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(56, 189, 248, 0.2);
+}
+
+/* liens */
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* glow texte */
+a:hover {
+    color: #38bdf8;
+
+    text-shadow:
+        0 0 10px rgba(56, 189, 248, 0.8),
+        0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+/* petit effet de ligne bleu au top */
+li::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 4px;
+
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(90deg,
+            #38bdf8,
+            #2563eb);
+}
