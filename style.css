@@ -1,25 +1,35 @@
-/* style.css */
+/* STYLE RETRO / CARTOON */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@300;400;500;600;700&display=swap');
 
-* {
+:root{
+    --dark: #1b1a1a;
+    --yellow: #FDB801;
+    --light: #FFF2E9;
+    --marron: #BA7200;
+    --white: #ffffff;
+}
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    height: 100vh;
+body{
+    font-family: "Kodchasan", sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    min-height: 100vh;
 }
 
 .hidden{
     visibility: hidden;
 }
 
-/* FLEXBOX */
+/* FLEX */
+
 .flex{
     display: flex;
     flex-wrap: wrap;
@@ -33,20 +43,20 @@ body {
     gap: 12px;
 }
 
-.justify-center {
+.justify-center{
     justify-content: center;
 }
 
-.align-center {
+.align-center{
     align-items: center;
 }
 
 .column{
-flex-direction: column;
+    flex-direction: column;
 }
 
-.container {
-    max-width:1200px ;
+.container{
+    max-width: 1200px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -62,293 +72,393 @@ flex-direction: column;
     width: 100%;
 }
 
-/* HEADER GENERALE */ 
+/* HEADER */
+
 header{
-    padding: 40px 40px 0px 40px;
+    padding: 24px 40px;
     margin-bottom: 40px;
+    background-color: var(--dark);
+    color: var(--light);
+
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
 
 h1{
     margin: auto;
 }
 
+h2{
+    font-size: 28px;
+}
+
+h3{
+    font-size: 22px;
+}
+
 /* ----------- CHALLENGE SHOP ----------- */
-.header_shop i {
-    color: white;
+
+.header_shop i{
+    color: var(--yellow);
     font-size: 34px;
 }
 
-.title-shop {
+.title-shop{
     font-size: 50px;
     font-weight: 700;
-    color: white;
-
+    color: var(--light);
 }
 
 .basket-number{
     border-radius: 300px;
     width: 30px;
     height: 30px;
-    background-color: red;
+    background-color: var(--yellow);
+
+    border: solid 3px var(--dark);
+
     text-align: center;
     font-size: 15px;
     font-weight: 700;
-    color: white;
+    color: var(--dark);
+
     margin-bottom: 50px;
     position: relative;
     top: -10px;
     left: -20px;
 }
 
-.cardProduct {
+.cardProduct{
     width: 320px;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--white);
+
+    border:
+        solid 3px var(--dark);
+
+    border-right:
+        solid 6px var(--dark);
+
+    border-bottom:
+        solid 9px var(--dark);
+
     border-radius: 24px;
+
     padding: 25px;
-    color: white;
+
+    color: var(--dark);
+
     cursor: pointer;
-    transition: all 0.35s ease;
+
+    transition:
+        transform .15s ease,
+        border .15s ease,
+        background-color .2s ease;
+
     position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-
 /* hover */
-.cardProduct:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+
+.cardProduct:hover{
+    transform: translateY(-4px);
+
+    border-right:
+        solid 3px var(--dark);
+
+    border-bottom:
+        solid 5px var(--dark);
+
+    background-color: var(--light);
 }
 
 /* titre */
-.cardProduct h2 {
+
+.cardProduct h2{
     font-size: 1.8rem;
     margin-bottom: 15px;
     font-weight: 700;
 }
 
 /* description */
-.cardProduct p {
+
+.cardProduct p{
     line-height: 1.6;
     margin-bottom: 15px;
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--dark);
 }
 
 /* prix */
-.price {
+
+.price{
     font-size: 1.5rem;
     font-weight: 700;
-    color: #38bdf8;
+    color: var(--marron);
 }
 
 /* carte sélectionnée */
-.cardSelect {
-    border: 2px solid #38bdf8;
-    transform: scale(1.05);
-    background: rgba(56, 189, 248, 0.12);
-    box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+
+.cardSelect{
+    border: solid 3px var(--dark);
+    border-right: solid 6px var(--dark);
+    border-bottom: solid 9px var(--dark);
+
+    background-color: #ffe6a8;
+
+    transform: scale(1.03);
 }
-
-
 
 /* ----------- SUPER HERO ----------- */
-/* TITRE */
-.h2-hero {
+
+.h2-hero{
     font-size: 45px;
     font-weight: 700;
-    color: white;
+    color: var(--dark);
     margin-bottom: 50px;
 }
 
-/* NOM HERO */
-.nom-de-super-hero {
-    color: #38bdf8;
+.nom-de-super-hero{
+    color: var(--marron);
     font-weight: 700;
-
 }
 
-/* BOUTON */
-#GoBtn {
+/* BOUTONS */
+
+#GoBtn,
+#btnCesar{
     padding: 18px 45px;
-    border: none;
+
+    border:
+        solid 3px var(--dark);
+
+    border-right:
+        solid 6px var(--dark);
+
+    border-bottom:
+        solid 9px var(--dark);
+
     border-radius: 18px;
+
     font-size: 30px;
     font-weight: 700;
-    color: white;
-    background: linear-gradient(135deg, #38bdf8, #2563eb);
-    box-shadow:
-        0 10px 25px rgba(37,99,235,0.35),
-        0 0 20px rgba(56,189,248,0.25);
-    
+
+    color: var(--dark);
+
+    background-color: var(--yellow);
+
     margin-bottom: 50px;
+
+    transition:
+        border .1s ease,
+        transform .1s ease,
+        filter .1s ease;
+
+    cursor: pointer;
 }
 
+#btnCesar{
+    margin: auto;
+    display: block;
+    width: fit-content;
+}
+
+#GoBtn:hover,
+#btnCesar:hover{
+    border-right:
+        solid 3px var(--dark);
+
+    border-bottom:
+        solid 5px var(--dark);
+
+    filter: brightness(.95);
+}
 
 /* ----------- TO DO LIST ----------- */
 
-.title-todo {
+.title-todo{
     text-align: center;
     font-size: 50px;
     font-weight: 700;
-    color: white;
+    color: var(--dark);
     margin-bottom: 50px;
-
 }
-
 
 /* input */
-.input-text {
+
+.input-text{
     width: 40%;
+
     padding: 18px 22px;
-    border: none;
-    outline: none;
+
+    border:
+        solid 3px var(--dark);
+
+    border-right:
+        solid 6px var(--dark);
+
+    border-bottom:
+        solid 9px var(--dark);
+
     border-radius: 18px;
-    background: rgba(255,255,255,0.12);
-    color: white;
-    font-size: 12px;
-    box-shadow:
-        inset 0 0 0 1px rgba(255,255,255,0.08);
-        margin: auto;
-        display: block;
+
+    background-color: var(--white);
+
+    color: var(--dark);
+
+    font-size: 14px;
+
+    margin: auto;
+    display: block;
+
+    font-family: "Kodchasan";
 }
 
-.todo-list {
+.todo-list{
     list-style: none;
     width: 40%;
     margin: auto;
-    color: white;
+    color: var(--dark);
     margin-top: 100px;
     font-size: 25px;
 }
 
-.todo-list li {
+.todo-list li{
     display: flex;
     align-items: center;
     gap: 30px;
+
+    margin-bottom: 18px;
+
+    padding: 16px;
+
+    background-color: var(--white);
+
+    border:
+        solid 3px var(--dark);
+
+    border-right:
+        solid 6px var(--dark);
+
+    border-bottom:
+        solid 9px var(--dark);
+
+    border-radius: 16px;
 }
 
 .chekbox{
-    background-color: white;
+    background-color: var(--yellow);
+
     width: 20px;
     height: 20px;
+
+    border:
+        solid 2px var(--dark);
 }
 
 /* ----------- A VOS MARQUES ----------- */
 
 .chrono-text{
-    color: white;
+    color: var(--dark);
     font-size: 50px;
     margin-bottom: 50px;
 }
 
-#start{
-    font-family: 'Poppins', sans-serif;
-    padding: 10px;
-    border: 2px green solid;
-    border-radius: 10px;
-    background-color: rgb(119, 245, 119);
-    color: green;
+#start,
+#stop,
+#reset{
+    font-family: "Kodchasan", sans-serif;
+
+    padding: 14px 20px;
+
+    border:
+        solid 3px var(--dark);
+
+    border-right:
+        solid 6px var(--dark);
+
+    border-bottom:
+        solid 9px var(--dark);
+
+    border-radius: 14px;
+
     font-size: 25px;
-    font-weight: 500;
-    box-shadow: 0 0px 20px rgba(193, 187, 187, 0.25);
+    font-weight: 700;
+
+    transition: .1s ease;
+
+    cursor: pointer;
+}
+
+#start{
+    background-color: rgb(112, 214, 83);
+    color: var(--dark);
 }
 
 #stop{
-    font-family: 'Poppins', sans-serif;
-    padding: 10px;
-    border: 2px rgb(113, 6, 17) solid;
-    border-radius: 10px;
-    background-color: rgb(254, 117, 131);
-    color: rgb(113, 6, 17);
-    font-size: 25px;
-    font-weight: 500;
-    box-shadow: 0 0px 20px rgba(193, 187, 187, 0.25);
+    background-color: rgb(255, 118, 83);
+    color: var(--dark);
 }
 
 #reset{
-    font-family: 'Poppins', sans-serif;
-    padding: 10px;
-    border: 2px rgb(12, 16, 151) solid;
-    border-radius: 10px;
-    background-color: rgb(110, 135, 233);
-    color: rgb(12, 16, 151);
-    font-size: 25px;
-    font-weight: 500;
-    box-shadow: 0 0px 20px rgba(193, 187, 187, 0.25);
+    background-color: var(--yellow);
+    color: var(--dark);
 }
 
-/* ----------- AU FIL DU JOUR ----------- */ 
+#start:hover,
+#stop:hover,
+#reset:hover{
+    border-right:
+        solid 3px var(--dark);
 
-
-/* classe pour le moment "matin"*/
-.bgMatin {
-    background-image: url(assets/matin.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    border-bottom:
+        solid 5px var(--dark);
 }
 
-/* classe pour le moment "aprem"*/
-.bgAprem {
-    background-image: url(assets/aprem.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+/* ----------- AU FIL DU JOUR ----------- */
+
+/* on retire les textures/fonds images */
+
+.bgMatin,
+.bgAprem,
+.bgSoir,
+.bgNuit{
+    background-image: none;
+    background-color: var(--light);
 }
 
-/* classe pour le moment "soir"*/
-.bgSoir {
-    background-image: url(assets/soir.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-}
+/* boite horloge */
 
-/* classe pour le moment "soir"*/
-.bgNuit {
-    background-image: url(assets/nuit.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-}
-
-/* boite contenant l'affichage de l'heure*/
-.clockBox {
+.clockBox{
     height: 50vh;
     width: 40%;
+
     margin: auto;
-    background-color: rgba(252, 255, 254, 0.166);
-    backdrop-filter: blur(4px);
+
+    background-color: var(--white);
+
+    border:
+        solid 4px var(--dark);
+
+    border-right:
+        solid 8px var(--dark);
+
+    border-bottom:
+        solid 12px var(--dark);
+
     border-radius: 40px;
+
     display: flex;
-    align-items: center; /* Centre verticalement */
-    justify-content: center; /* Centre horizontalement */
+    align-items: center;
+    justify-content: center;
 }
 
-/* paragraphe de l'heure*/
-.clockBox  p {
+/* heure */
+
+.clockBox p{
     font-size: 7rem;
-    font-family: "Funnel Display", sans-serif;
-    color: aliceblue;
-}
+    color: var(--dark);
 
-
-/* Code cesar */
-
-#btnCesar{
-    padding: 18px 45px;
-    border: none;
-    border-radius: 18px;
-    font-size: 30px;
+    font-family: "Kodchasan", sans-serif;
     font-weight: 700;
-    color: white;
-    background: linear-gradient(135deg, #38bdf8, #2563eb);
-    box-shadow:
-        0 10px 25px rgba(37,99,235,0.35),
-        0 0 20px rgba(56,189,248,0.25);
-    
-    margin-bottom: 50px;
-    margin: auto;
-    display: block;
-    width: fit-content;
 }

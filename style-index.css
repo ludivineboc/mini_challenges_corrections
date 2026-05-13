@@ -1,22 +1,30 @@
-/* style.css */
+/* STYLE RETRO / CARTOON */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@300;400;500;600;700&display=swap');
 
-* {
+:root{
+    --dark: #1b1a1a;
+    --yellow: #FDB801;
+    --light: #FFF2E9;
+    --marron: #BA7200;
+    --white: #ffffff;
+}
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: white;
+body{
+    font-family: "Kodchasan", sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
     min-height: 100vh;
     padding: 50px;
 }
 
-.container {
+.container{
     max-width: 1200px;
     width: 100%;
     margin-left: auto;
@@ -26,37 +34,61 @@ body {
 h1{
     width: 100%;
     text-align: center;
+
+    font-size: 52px;
+    margin-bottom: 64px;
+
+    color: var(--dark);
 }
 
+/* FLEX */
 
-.flex {
+.flex{
     display: flex;
     flex-wrap: wrap;
 }
 
-.space-between {
+.space-between{
     justify-content: space-between;
 }
 
-.gap-50 {
+.gap-50{
     gap: 50px;
 }
 
-/* container dashboard */
-ul {
+/* LISTE */
+
+ul{
     list-style: none;
 }
 
-/* cartes dashboard */
-li {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+/* CARTES DASHBOARD */
+
+li{
+    position: relative;
+
+    background-color: var(--white);
+
+    border:
+        solid 3px var(--dark);
+
+    border-right:
+        solid 6px var(--dark);
+
+    border-bottom:
+        solid 9px var(--dark);
+
     border-radius: 24px;
-    transition: 0.35s ease;
+
+    transition:
+        transform .15s ease,
+        border .15s ease,
+        background-color .2s ease;
+
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
     width: 30%;
+
     padding: 50px 0;
 
     display: flex;
@@ -65,50 +97,58 @@ li {
 }
 
 /* hover card */
-li:hover {
 
-    transform: translateY(-10px) scale(1.03);
+li:hover{
 
-    border-color: rgba(56, 189, 248, 0.4);
+    transform: translateY(-4px);
 
-    box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.35),
-        0 0 25px rgba(56, 189, 248, 0.2);
+    border-right:
+        solid 3px var(--dark);
+
+    border-bottom:
+        solid 5px var(--dark);
+
+    background-color: #fff6d8;
 }
 
 /* liens */
-a {
+
+a{
     text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
+
+    color: var(--dark);
+
+    font-size: 24px;
+
+    font-weight: 700;
+
     text-align: center;
-    transition: 0.3s;
+
+    transition: .2s ease;
 }
 
-/* glow texte */
-a:hover {
-    color: #38bdf8;
+/* hover texte */
 
-    text-shadow:
-        0 0 10px rgba(56, 189, 248, 0.8),
-        0 0 20px rgba(56, 189, 248, 0.5);
+a:hover{
+    color: var(--marron);
 }
 
-/* petit effet de ligne bleu au top */
-li::before {
+/* bandeau haut */
+
+li::before{
 
     content: "";
 
     position: absolute;
 
     width: 100%;
-    height: 4px;
+    height: 10px;
 
     top: 0;
     left: 0;
 
-    background: linear-gradient(90deg,
-            #38bdf8,
-            #2563eb);
+    background-color: var(--yellow);
+
+    border-bottom:
+        solid 3px var(--dark);
 }
