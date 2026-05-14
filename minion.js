@@ -36,6 +36,8 @@ function traduire(tableauContenantLaPhrase) {
 
         });
 
+        alert(`Votre phrase traduite : ${repTraduit}`);
+
 
     } else {
 
