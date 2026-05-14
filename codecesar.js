@@ -13,7 +13,7 @@ Pour aller plus loin : et si on pouvait chiffrer des phrases entières
  *  rien
  * @returns le mot a encoder 
  */
-function demanderCode(){
+function demanderCode() {
     let rep = prompt("Quel mot voulez-vosu encoder ? ")
     return rep;
 }
@@ -36,10 +36,15 @@ function codeCesar(motAencoder) {
         let nouvelleLettre = "";
 
 
-        if(lettre === "z") {
+        if (lettre === "z") {
             // encoder la lettre z en a
             nouvelleLettre = "a";
-        } else {
+        } else if (lettre === " " || lettre === ","|| lettre === "'"|| lettre === "?"|| lettre === "!") {
+            // encoder les caractere speciaux
+            nouvelleLettre = " ";
+        }
+
+        else {
             // trouver la position de la lettre dans l'alphabet
             let index = alphabet.indexOf(lettre);
 
@@ -60,12 +65,12 @@ function codeCesar(motAencoder) {
  * affiche le mot une fois encoder
  * @param {*} motEncoder 
  */
-function afficherMotEncoder(motEncoder){
+function afficherMotEncoder(motEncoder) {
     alert(motEncoder)
 }
 
 //lancer le scenario au clic : prompt -> encodage -> affichage du mot encodé
-document.querySelector("#btnCesar").addEventListener("click", ()=>{
+document.querySelector("#btnCesar").addEventListener("click", () => {
 
     let motAEncoder = demanderCode()
     let motEncoder = codeCesar(motAEncoder);
