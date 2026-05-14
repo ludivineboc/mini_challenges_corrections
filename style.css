@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@300;400;500;600;700&display=swap');
 
-:root{
+:root {
     --dark: #1b1a1a;
     --yellow: #FDB801;
     --light: #FFF2E9;
@@ -10,52 +10,52 @@
     --white: #ffffff;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-body{
+body {
     font-family: "Kodchasan", sans-serif;
     background-color: var(--light);
     color: var(--dark);
     min-height: 100vh;
 }
 
-.hidden{
+.hidden {
     visibility: hidden;
 }
 
 /* FLEX */
 
-.flex{
+.flex {
     display: flex;
     flex-wrap: wrap;
 }
 
-.space-between{
+.space-between {
     justify-content: space-between;
 }
 
-.gap-12{
+.gap-12 {
     gap: 12px;
 }
 
-.justify-center{
+.justify-center {
     justify-content: center;
 }
 
-.align-center{
+.align-center {
     align-items: center;
 }
 
-.column{
+.column {
     flex-direction: column;
 }
 
-.container{
+.container {
     max-width: 1200px;
     width: 100%;
     margin-left: auto;
@@ -64,17 +64,17 @@ body{
 
 /* DIMENSIONS */
 
-.w-30{
+.w-30 {
     width: 30%;
 }
 
-.w-100{
+.w-100 {
     width: 100%;
 }
 
 /* HEADER */
 
-header{
+header {
     padding: 24px 40px;
     margin-bottom: 40px;
     background-color: var(--dark);
@@ -85,97 +85,77 @@ header{
     z-index: 99;
 }
 
-h1{
+h1 {
     margin: auto;
 }
 
-h2{
+h2 {
     font-size: 28px;
 }
 
-h3{
+h3 {
     font-size: 22px;
 }
 
 /* ----------- CHALLENGE SHOP ----------- */
 
-.header_shop i{
+.header_shop i {
     color: var(--yellow);
     font-size: 34px;
 }
 
-.title-shop{
+.title-shop {
     font-size: 50px;
     font-weight: 700;
     color: var(--light);
 }
 
-.basket-number{
+.basket-number {
     border-radius: 300px;
     width: 30px;
     height: 30px;
     background-color: var(--yellow);
-
     border: solid 3px var(--dark);
-
     text-align: center;
     font-size: 15px;
     font-weight: 700;
     color: var(--dark);
-
     margin-bottom: 50px;
     position: relative;
     top: -10px;
     left: -20px;
 }
 
-.cardProduct{
+.cardProduct {
     width: 320px;
     background-color: var(--white);
-
-    border:
-        solid 3px var(--dark);
-
-    border-right:
-        solid 6px var(--dark);
-
-    border-bottom:
-        solid 9px var(--dark);
-
+    border: solid 3px var(--dark);
+    border-right: solid 6px var(--dark);
+    border-bottom: solid 9px var(--dark);
     border-radius: 24px;
-
     padding: 25px;
-
     color: var(--dark);
-
     cursor: pointer;
-
     transition:
         transform .15s ease,
         border .15s ease,
         background-color .2s ease;
-
     position: relative;
     overflow: hidden;
 }
 
 /* hover */
 
-.cardProduct:hover{
+.cardProduct:hover {
     transform: translateY(-4px);
-
-    border-right:
-        solid 3px var(--dark);
-
-    border-bottom:
-        solid 5px var(--dark);
-
+    border-right: solid 3px var(--dark);
+    border-bottom: solid 5px var(--dark);
     background-color: var(--light);
 }
 
 /* titre */
 
-.cardProduct h2{
+.cardProduct h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
     font-weight: 700;
@@ -183,7 +163,7 @@ h3{
 
 /* description */
 
-.cardProduct p{
+.cardProduct p {
     line-height: 1.6;
     margin-bottom: 15px;
     color: var(--dark);
@@ -191,7 +171,7 @@ h3{
 
 /* prix */
 
-.price{
+.price {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--marron);
@@ -199,26 +179,24 @@ h3{
 
 /* carte sélectionnée */
 
-.cardSelect{
+.cardSelect {
     border: solid 3px var(--dark);
     border-right: solid 6px var(--dark);
     border-bottom: solid 9px var(--dark);
-
     background-color: #ffe6a8;
-
     transform: scale(1.03);
 }
 
 /* ----------- SUPER HERO ----------- */
 
-.h2-hero{
+.h2-hero {
     font-size: 45px;
     font-weight: 700;
     color: var(--dark);
     margin-bottom: 50px;
 }
 
-.nom-de-super-hero{
+.nom-de-super-hero {
     color: var(--marron);
     font-weight: 700;
 }
@@ -226,57 +204,50 @@ h3{
 /* BOUTONS */
 
 #GoBtn,
-#btnCesar{
+#btnCesar,
+#btnChat,
+#clearBtn,
+#clearBtn2,
+#btnMinion {
     padding: 18px 45px;
-
-    border:
-        solid 3px var(--dark);
-
-    border-right:
-        solid 6px var(--dark);
-
-    border-bottom:
-        solid 9px var(--dark);
-
+    border: solid 3px var(--dark);
+    border-right: solid 6px var(--dark);
+    border-bottom: solid 9px var(--dark);
     border-radius: 18px;
-
     font-size: 30px;
     font-weight: 700;
-
     color: var(--dark);
-
     background-color: var(--yellow);
-
     margin-bottom: 50px;
-
     transition:
         border .1s ease,
         transform .1s ease,
         filter .1s ease;
-
     cursor: pointer;
+    display: block;
+    width: fit-content;
+    margin: auto;
 }
 
-#btnCesar{
+#btnCesar {
     margin: auto;
     display: block;
     width: fit-content;
 }
 
 #GoBtn:hover,
-#btnCesar:hover{
+#btnCesar:hover,
+#btnChat:hover {
     border-right:
         solid 3px var(--dark);
-
     border-bottom:
         solid 5px var(--dark);
-
     filter: brightness(.95);
 }
 
 /* ----------- TO DO LIST ----------- */
 
-.title-todo{
+.title-todo {
     text-align: center;
     font-size: 50px;
     font-weight: 700;
@@ -286,35 +257,25 @@ h3{
 
 /* input */
 
-.input-text{
+.input-text {
     width: 40%;
-
     padding: 18px 22px;
-
     border:
         solid 3px var(--dark);
-
     border-right:
         solid 6px var(--dark);
-
     border-bottom:
         solid 9px var(--dark);
-
     border-radius: 18px;
-
     background-color: var(--white);
-
     color: var(--dark);
-
     font-size: 14px;
-
     margin: auto;
     display: block;
-
     font-family: "Kodchasan";
 }
 
-.todo-list{
+.todo-list {
     list-style: none;
     width: 40%;
     margin: auto;
@@ -323,42 +284,33 @@ h3{
     font-size: 25px;
 }
 
-.todo-list li{
+.todo-list li {
     display: flex;
     align-items: center;
     gap: 30px;
-
     margin-bottom: 18px;
-
     padding: 16px;
-
     background-color: var(--white);
-
     border:
         solid 3px var(--dark);
-
     border-right:
         solid 6px var(--dark);
-
     border-bottom:
         solid 9px var(--dark);
-
     border-radius: 16px;
 }
 
-.chekbox{
+.chekbox {
     background-color: var(--yellow);
-
     width: 20px;
     height: 20px;
-
     border:
         solid 2px var(--dark);
 }
 
 /* ----------- A VOS MARQUES ----------- */
 
-.chrono-text{
+.chrono-text {
     color: var(--dark);
     font-size: 50px;
     margin-bottom: 50px;
@@ -366,7 +318,7 @@ h3{
 
 #start,
 #stop,
-#reset{
+#reset {
     font-family: "Kodchasan", sans-serif;
 
     padding: 14px 20px;
@@ -390,24 +342,24 @@ h3{
     cursor: pointer;
 }
 
-#start{
+#start {
     background-color: rgb(112, 214, 83);
     color: var(--dark);
 }
 
-#stop{
+#stop {
     background-color: rgb(255, 118, 83);
     color: var(--dark);
 }
 
-#reset{
+#reset {
     background-color: var(--yellow);
     color: var(--dark);
 }
 
 #start:hover,
 #stop:hover,
-#reset:hover{
+#reset:hover {
     border-right:
         solid 3px var(--dark);
 
@@ -417,19 +369,31 @@ h3{
 
 /* ----------- AU FIL DU JOUR ----------- */
 
-/* on retire les textures/fonds images */
 
-.bgMatin,
-.bgAprem,
-.bgSoir,
-.bgNuit{
-    background-image: none;
-    background-color: var(--light);
+.bgMatin {
+    background-image: url(assets/matin.jpg);
+    background-size: cover;
 }
+
+.bgAprem {
+    background-image: url(assets/aprem.jpg);
+    background-size: cover;
+}
+
+.bgSoir {
+    background-image: url(assets/soir.jpg);
+    background-size: cover;
+}
+
+.bgNuit {
+    background-image: url(assets/nuit.png);
+    background-size: cover;
+}
+
 
 /* boite horloge */
 
-.clockBox{
+.clockBox {
     height: 50vh;
     width: 40%;
 
@@ -455,10 +419,68 @@ h3{
 
 /* heure */
 
-.clockBox p{
+.clockBox p {
     font-size: 7rem;
     color: var(--dark);
 
     font-family: "Kodchasan", sans-serif;
     font-weight: 700;
+}
+
+/* ----------- PIXEL ART ----------- */
+
+
+.h2-pixelart {
+    text-align: center;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+td {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #555;
+    background-color: white;
+    cursor: pointer;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+#clearBtn, #clearBtn2{
+    margin-bottom: 50px;
+}
+
+.palette{
+    margin-top: 20px;
+}
+
+/* ----------- LA TERRE PLATE ----------- */
+
+.plateau-jeu {
+    width: 80%;
+    height: 80vh;
+    overflow: hidden;
+    border: solid black 2px;
+    margin: auto;
+}
+
+
+.personnage{
+    z-index: 100;
+    background-image: url(assets/pacman.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 0;
+    left: 0;
 }
